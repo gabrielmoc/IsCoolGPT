@@ -7,23 +7,23 @@ on:
     branches: [ "main", "staging" ]
 
 jobs:
-  build-and-lint:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: "18"
 
-      - name: Install dependencies
+      - name: Instalar dependências
         run: npm install
 
-      - name: Run lint (placeholder)
-        run: echo "Nenhum lint configurado ainda"
+      - name: Rodar lint
+        run: npx eslint . || true
 
-      - name: Build Docker image
+      - name: Build Docker
         run: docker build -t iscoolgpt .
