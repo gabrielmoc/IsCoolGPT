@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/llm", llmRoutes);
 
 app.get("/", (req, res) => {
-  res.send("IsCoolGPT backend rodando ✨");
+  res.send("IsCoolGPT backend rodando! Desenvolvido por Gabriel Cavalcanti.");
 });
 
 app.listen(port, () => {
