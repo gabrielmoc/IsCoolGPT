@@ -67,6 +67,15 @@ GROQ_API_KEY=suachave
 
 ```bash
 npm install
+```
+
+Crie um arquivo .env contendo:
+```env
+GROQ_API_KEY=sua_chave_aqui
+PORT=3000
+```
+
+```bash
 npm start
 ```
 
